@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Akronim&display=swap');
+
+.font-sizes(){
+    @big: 3.125em;
+    @medium: 1.5625em;
+    @small: 0.3125em;
+    .custom(@custom){
+        font-size: @custom;
+    }
+}
+
+@colors: {
+    dark: #131313;
+    light: #ffc400;
+    extra-light: #eeeeee;
+    extra: red;
+}
+
+body{
+    background-color: @colors[dark];
+    color: @colors[extra-light];
+}
+
+h1{
+    color: @colors[light];
+    .font-sizes.custom(5em);
+    font-family: 'Akronim', cursive;
+}
+
+p{
+    font-size: .font-sizes[@medium];
+    strong {
+        color: @colors[light];
+    }
+}
